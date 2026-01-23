@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/talentops
+    username: postgres
+    password: postgres
+    jpa:
+      hibernate:
+        ddl-auto: validate
+  flyway:
+    baseline-on-migrate: true

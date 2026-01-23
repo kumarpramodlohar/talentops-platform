@@ -1,0 +1,4 @@
+package com.talentops.job;
+
+public class Job {
+}
