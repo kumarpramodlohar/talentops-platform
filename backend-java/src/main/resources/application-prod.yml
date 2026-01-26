@@ -1,0 +1,22 @@
+spring:
+    datasource:
+        url: jdbc:postgresql://localhost:5432/talentops
+        username: pramodlohar
+        password:
+    jpa:
+        hibernate:
+            ddl-auto: validate
+
+    flyway:
+        enabled: true
+        clean-disabled: true
+#       repair-on-migrate: false
+
+    security:
+        oauth2:
+            resourceserver:
+                jwt:
+                    issuer-uri: http://localhost:8080/realms/talentops
+    threads:
+        virtual:
+            enabled: true

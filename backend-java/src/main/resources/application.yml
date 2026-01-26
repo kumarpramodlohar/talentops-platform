@@ -1,10 +1,36 @@
 spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/talentops
-    username: postgres
-    password: postgres
-    jpa:
-      hibernate:
-        ddl-auto: validate
-  flyway:
-    baseline-on-migrate: true
+  application:
+    name: talentops
+
+  profiles:
+    active: dev
+
+#  jpa:
+#    hibernate:
+#      ddl-auto: validate
+#  flyway:
+#    enabled: true
+#    locations: classpath:db/migration
+#    baseline-on-migrate: true
+#    validate-on-migrate: true
+#    clean-disabled: true
+##    repair-on-migrate: ${FLYWAY_REPAIR:false}
+#
+#  spring:
+#    security:
+#      oauth2:
+#        provider:
+#            keycloak:
+#                issuer-uri: http://localhost:8080/realms/talentops
+#        resourceserver:
+#            jwt:
+#                issuer-uri: http://localhost:8080/realms/talentops
+#    threads:
+#      virtual:
+#        enabled: true
+#
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        security: DEBUG

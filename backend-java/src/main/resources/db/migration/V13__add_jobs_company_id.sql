@@ -1,0 +1,9 @@
+-- Add company_id column
+-- ALTER TABLE public.jobs
+--     ADD COLUMN IF NOT EXISTS company_id UUID;
+--
+-- -- Add FK constraint
+-- ALTER TABLE public.jobs
+--     ADD CONSTRAINT IF NOT EXISTS fk_jobs_company
+--     FOREIGN KEY (company_id)
+--     REFERENCES public.companies(id);
