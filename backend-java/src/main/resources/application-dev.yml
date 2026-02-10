@@ -2,7 +2,8 @@ spring:
     datasource:
         url: jdbc:postgresql://localhost:5432/talentops
         username: pramodlohar
-        password:
+        password: postgres
+
     jpa:
         hibernate:
             ddl-auto: validate
@@ -10,13 +11,47 @@ spring:
     flyway:
         enabled: true
         clean-disabled: true
-#       repair-on-migrate: false
+#        repair-on-migrate: false
+
 
     security:
         oauth2:
             resourceserver:
                 jwt:
                     issuer-uri: http://localhost:8080/realms/talentops
+keycloak:
+    server-url: http://localhost:8080
+    realm: talentops
+    client-id: admin-client
+    client-secret: KnrNZfEDmgw8cnznDyCYSw0Yua6gzyeV
+
+
     threads:
         virtual:
             enabled: true
+
+server:
+    port: 8081
+
+# Keycloak Configuration
+#keycloak:
+#    realm: talentops
+#    auth-server-url: http://localhost:8180
+#    resource: talentops-backend
+#    credentials:
+#        secret: 2OhW2dtpBwNYK6LozCHArADKOk2e1Qjc  # Replace with actual secret
+#    use-resource-role-mappings: true
+#    bearer-only: true
+
+# Logging
+#logging:
+#    level:
+#        org.springframework.security: DEBUG
+#        org.springframework.security.oauth2: DEBUG
+
+#logging:
+#    level:
+#        root: INFO
+#        com.talentops: INFO
+#        org.springframework.security: INFO
+#        org.springframework.security.oauth2: INFO

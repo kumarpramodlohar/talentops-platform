@@ -1,6 +1,6 @@
 package com.talentops.notification;
 
-import com.talentops.user.UserEntity;
+import com.talentops.domain.user.entity.UserEntity;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
